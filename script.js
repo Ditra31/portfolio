@@ -1,6 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. Gestion du Menu Hamburger Mobile ---
+    // --- 1. Modal d'authentification pour GitHub ---
+    const githubBtn = document.getElementById('github-btn');
+    const githubModal = document.getElementById('github-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const loginForm = document.getElementById('github-login-form');
+    const loginError = document.getElementById('login-error');
+
+    // Définissez vos identifiants ici
+    const AUTH_USER = "admin";
+    const AUTH_PASS = "1234";
+    const GITHUB_URL = "https://github.com/Ditra31";
+
+    if (githubBtn && githubModal) {
+        githubBtn.addEventListener('click', () => {
+            githubModal.classList.remove('hidden');
+            loginError.classList.add('hidden');
+        });
+
+        const closeModal = () => {
+            githubModal.classList.add('hidden');
+            loginForm.reset();
+            loginError.classList.add('hidden');
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        githubModal.addEventListener('click', (e) => {
+            if (e.target === githubModal) {
+                closeModal();
+            }
+        });
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const usernameInput = document.getElementById('github-username').value;
+            const passwordInput = document.getElementById('github-password').value;
+
+            if (usernameInput === AUTH_USER && passwordInput === AUTH_PASS) {
+                closeModal();
+                window.open(GITHUB_URL, '_blank');
+            } else {
+                loginError.classList.remove('hidden');
+            }
+        });
+    }
+
+    // --- 2. Gestion du Menu Hamburger Mobile ---
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -38,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. Surbrillance dynamique du menu au scroll ---
+    // --- 3. Surbrillance dynamique du menu au scroll ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav div a[href^="#"]');
 
@@ -64,27 +110,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightNavOnScroll);
 
-    // --- 3. Effet de mouvement au survol de la souris (Hover Effect sur les sections et cartes) ---
+    // --- 4. Effet de mouvement au survol de la souris (Hover Effect) ---
     const interactiveCards = document.querySelectorAll('#projects .grid > div, #skills .grid > div, #about .grid > div');
     
     interactiveCards.forEach(card => {
-        // Applique les classes Tailwind pour une transition fluide
         card.classList.add('transition-all', 'duration-300', 'ease-out');
 
         card.addEventListener('mouseenter', () => {
-            // Élévation légère et translation vers le haut au survol
             card.style.transform = 'translateY(-6px) scale(1.01)';
             card.style.boxShadow = '0 20px 25px -5px rgba(37, 99, 235, 0.15), 0 8px 10px -6px rgba(37, 99, 235, 0.1)';
         });
 
         card.addEventListener('mouseleave', () => {
-            // Réinitialisation de la position
             card.style.transform = 'translateY(0) scale(1)';
             card.style.boxShadow = 'none';
         });
     });
 
-    // --- 4. Bouton "Retour en haut" ---
+    // --- 5. Bouton "Retour en haut" ---
     const backToTopBtn = document.createElement('button');
     backToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
     backToTopBtn.setAttribute('aria-label', 'Retour en haut de la page');
@@ -105,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // --- 5. Animation d'apparition au défilement (IntersectionObserver) ---
+    // --- 6. Animation d'apparition au défilement (IntersectionObserver) ---
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
