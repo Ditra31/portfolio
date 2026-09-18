@@ -6,443 +6,424 @@
     <title>Aimé Jason Andriatiana RAZAFIMANDIMBY | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon CDN pour les icônes officielles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicon/devicon@v2.15.4/devicon.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#1e293b',
+                        brand: {
+                            green: '#10b981',
+                            greenHover: '#059669',
+                            dark: '#0f0f11',
+                            card: '#18181b',
+                            border: '#27272a'
+                        }
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-green selection:text-black">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur border-b border-slate-800 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-wider text-blue-500">JASON<span class="text-white">.DEV</span></a>
-            <div class="space-x-6 text-sm font-medium hidden md:block">
-                <a href="#about" class="hover:text-blue-400 transition">À propos</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projets</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Compétences</a>
-                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- Photo de profil -->
-            <div class="inline-block p-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6">
-                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-slate-900 shadow-xl bg-slate-800">
+    <!-- Container Principal (Layout BENTO) -->
+    <div class="max-w-7xl mx-auto px-4 py-8 md:py-12 min-h-screen grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- ================= CARTE LATÉRALE FIXE (Profil) ================= -->
+        <aside class="lg:col-span-4 lg:sticky lg:top-8 bg-brand-card border border-brand-border rounded-3xl p-6 flex flex-col justify-between shadow-2xl">
+            <div>
+                <!-- Photo Profil -->
+                <div class="w-full aspect-square rounded-2xl overflow-hidden mb-6 border border-brand-border/60 bg-slate-900">
                     <img src="photo.jpeg" alt="Aimé Jason Andriatiana RAZAFIMANDIMBY" class="w-full h-full object-cover">
                 </div>
+
+                <!-- Nom & Titre -->
+                <div class="text-center mb-6">
+                    <h1 class="text-2xl font-bold tracking-tight text-white mb-1">
+                        Aimé Jason Andriatiana <span class="block text-slate-300">RAZAFIMANDIMBY</span>
+                    </h1>
+                    <span class="inline-block text-xs font-mono font-semibold text-brand-green uppercase tracking-wider bg-brand-green/10 px-3 py-1 rounded-full border border-brand-green/20">
+                        Développeur Web & Desktop
+                    </span>
+                </div>
+
+                <!-- Informations rapides -->
+                <div class="space-y-3 text-xs text-slate-400 mb-6 border-t border-b border-brand-border py-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-green text-sm w-4 text-center"></i>
+                        <a href="mailto:aimejasonandriatiana@gmail.com" class="hover:text-white transition truncate">aimejasonandriatiana@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brand-green text-sm w-4 text-center"></i>
+                        <a href="tel:+261338992041" class="hover:text-white transition">+261 33 89 920 41</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-brand-green text-sm w-4 text-center"></i>
+                        <span>Fianarantsoa, Madagascar (ENI)</span>
+                    </div>
+                </div>
+
+                <!-- Réseaux Sociaux -->
+                <div class="flex justify-center gap-3 mb-6 text-slate-400">
+                    <a href="#" class="w-10 h-10 rounded-xl bg-slate-900 border border-brand-border flex items-center justify-center hover:text-brand-green hover:border-brand-green/50 transition">
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-slate-900 border border-brand-border flex items-center justify-center hover:text-brand-green hover:border-brand-green/50 transition">
+                        <i class="fa-brands fa-linkedin-in text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-xl bg-slate-900 border border-brand-border flex items-center justify-center hover:text-brand-green hover:border-brand-green/50 transition">
+                        <i class="fa-brands fa-x-twitter text-lg"></i>
+                    </a>
+                </div>
             </div>
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4">
-                Aimé Jason Andriatiana <span class="text-blue-500">RAZAFIMANDIMBY</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-6 font-medium">
-                Développeur Web & Desktop | Étudiant à l'École Nationale d'Informatique (ENI)
-            </p>
-            <p class="text-slate-300 max-w-2xl mx-auto mb-8 text-sm md:text-base leading-relaxed">
-                À la recherche d'un stage de 2 à 3 mois (disponible dès septembre). Passionné par l'excellence algorithmique, le développement d'applications fluides et la fiabilité des infrastructures réseaux.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition shadow-lg shadow-blue-500/25">
-                    Voir mes projets
-                </a>
-                <a href="CV_Jason_RAZAFIMANDIMBY.pdf" download class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-lg transition shadow-lg shadow-indigo-500/25 flex items-center gap-2">
+
+            <!-- Boutons d'action -->
+            <div class="space-y-3">
+                <a href="CV_Jason_RAZAFIMANDIMBY.pdf" download class="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-brand-border text-slate-200 text-sm font-medium flex items-center justify-center gap-2 transition">
                     <i class="fa-solid fa-file-arrow-down"></i> Télécharger mon CV
                 </a>
-                <a href="#contact" class="border border-slate-700 hover:border-slate-500 text-slate-300 font-medium px-6 py-3 rounded-lg transition">
-                    Me contacter
+                <a href="mailto:aimejasonandriatiana@gmail.com" class="w-full py-3 px-4 rounded-xl bg-brand-green hover:bg-brand-greenHover text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg shadow-brand-green/20">
+                    <i class="fa-solid fa-paper-plane"></i> Me Contacter
                 </a>
             </div>
-        </div>
-    </section>
+        </aside>
 
-    <!-- À propos -->
-    <section id="about" class="py-20 bg-slate-800/50 border-y border-slate-800 px-4">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center"><span class="text-blue-500">#</span> À propos</h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="space-y-4 text-slate-300 leading-relaxed">
-                    <p>
-                        Actuellement en 2e année de Licence Professionnelle à l'ENI (Fianarantsoa), j'allie le développement applicatif à une solide compréhension de la gestion de bases de données et des infrastructures réseaux.
-                    </p>
-                    <p>
-                        Mon approche ne se limite pas à l'écriture de code : j'aime investiguer les anomalies, optimiser les performances et proposer des interfaces ergonomiques inspirées des principes UX/UI (formation Orange Digital Center).
-                    </p>
+        <!-- ================= CONTENU PRINCIPAL (À Droite) ================= -->
+        <main class="lg:col-span-8 space-y-12">
+            
+            <!-- SECTION HERO / A PROPOS -->
+            <section id="about" class="space-y-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+                    <span class="text-xs font-mono uppercase tracking-widest text-slate-400">À PROPOS DE MOI</span>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-700/50 space-y-4">
-                    <div class="flex items-center gap-3 text-slate-300">
-                        <i class="fa-solid fa-graduation-cap text-blue-400 w-6"></i>
-                        <span>Licence Informatique Générale - ENI</span>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight text-white">
+                    Bonjour, je suis <span class="text-brand-green border-2 border-dashed border-brand-green/60 px-2 py-0.5 rounded-lg inline-block">Jason</span>
+                </h2>
+
+                <h3 class="text-2xl md:text-3xl font-bold text-slate-200">
+                    Développeur d'Applications Web, Desktop .
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                    Actuellement en 2e année de Licence Professionnelle à l'École Nationale d'Informatique (ENI Fianarantsoa). Je suis un étudiant passionné par l'excellence algorithmique, le développement logiciel, l'optimisation de bases de données et la mise en place d'infrastructures système et réseau fiables.
+                </p>
+
+                <!-- Stat Cards / Compteurs -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-5 text-center sm:text-left">
+                        <div class="text-3xl font-extrabold text-white mb-1">2e Année</div>
+                        <div class="text-xs text-slate-400 font-medium">Licence Informatique ENI</div>
                     </div>
-                    <div class="flex items-center gap-3 text-slate-300">
-                        <i class="fa-solid fa-certificate text-amber-400 w-6"></i>
-                        <span>Certification UX/UI - Orange Digital Center</span>
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-5 text-center sm:text-left">
+                        <div class="text-3xl font-extrabold text-white mb-1">6+</div>
+                        <div class="text-xs text-slate-400 font-medium">Projets Majeurs Réalisés</div>
                     </div>
-                    <div class="flex items-center gap-3 text-slate-300">
-                        <i class="fa-solid fa-location-dot text-rose-500 w-6"></i>
-                        <span>Fianarantsoa, Madagascar</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-slate-300">
-                        <i class="fa-solid fa-briefcase text-emerald-400 w-6"></i>
-                        <span>Disponible pour stage de 2 à 3 mois</span>
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-5 text-center sm:text-left">
+                        <div class="text-3xl font-extrabold text-brand-green mb-1">2-3 Mois</div>
+                        <div class="text-xs text-slate-400 font-medium">Dispo Stage dès Septembre</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Projets -->
-    <section id="projects" class="py-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center"><span class="text-blue-500">#</span> Projets Réalisés</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- Projet 1 -->
-                <div class="bg-slate-800 rounded-xl border border-slate-700/50 overflow-hidden flex flex-col justify-between hover:border-blue-500/50 transition">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <i class="fa-solid fa-folder-open text-3xl text-emerald-400"></i>
-                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2 py-1 rounded">Mai 2026</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Gestion des Salariés</h3>
-                        <p class="text-slate-400 text-sm mb-4">
-                            Application web développée sous le framework Vue.js pour la gestion du personnel.
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <div class="flex flex-wrap gap-2 font-mono text-xs text-blue-300">
-                            <span>#Vue.js</span> <span>#JavaScript</span> <span>#Frontend</span>
-                        </div>
+            <!-- SECTION PROJETS -->
+            <section id="projects" class="space-y-6 pt-6">
+                <div class="flex items-center justify-between border-b border-brand-border pb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+                        <h2 class="text-xl font-bold tracking-wide text-white uppercase font-mono text-sm">Projets Réalisés</h2>
                     </div>
                 </div>
 
-                <!-- Projet 2 -->
-                <div class="bg-slate-800 rounded-xl border border-slate-700/50 overflow-hidden flex flex-col justify-between hover:border-blue-500/50 transition">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <i class="fa-solid fa-money-check-dollar text-3xl text-purple-400"></i>
-                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2 py-1 rounded">Août 2026</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Paiement de Salaires</h3>
-                        <p class="text-slate-400 text-sm mb-4">
-                            Application desktop développée en C# pour la gestion des paies.
-                        </p>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <div class="flex flex-wrap gap-2 font-mono text-xs text-blue-300">
-                            <span>#C#</span> <span>#.NET</span> <span>#Desktop</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="space-y-6">
 
-                <!-- Projet 3 : GestPharma -->
-                <div class="bg-slate-800 rounded-xl border border-slate-700/50 overflow-hidden lg:col-span-3 flex flex-col justify-between hover:border-blue-500/50 transition">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
+                    <!-- Projet GestPharma -->
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-6 space-y-4 hover:border-brand-green/40 transition">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
                             <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-pills text-3xl text-red-400"></i>
-                                <h3 class="text-2xl font-bold">GestPharma - Gestion de Pharmacie</h3>
+                                <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
+                                    <i class="fa-solid fa-pills text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">GestPharma - Gestion de Pharmacie</h3>
+                                    <p class="text-xs text-slate-400 font-mono">Système Desktop Java & PostgreSQL</p>
+                                </div>
                             </div>
-                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2 py-1 rounded">Août 2026</span>
+                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-brand-border">Août 2026</span>
                         </div>
-                        <p class="text-slate-300 text-sm mb-6 max-w-3xl">
-                            Système d'information desktop développé en Java et PostgreSQL via l'architecture DAO. L'application offre un tableau de bord analytique, la gestion du stock de médicaments avec alerte seuil critique, l'enregistrement des réapprovisionnements, le suivi du chiffre d'affaires et la génération instantanée de factures au format PDF.
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Application de gestion de stock de médicaments, suivi des réapprovisionnements, chiffre d'affaires analytique et génération instantanée de factures au format PDF (Architecture DAO).
                         </p>
-
-                        <!-- Galerie GestPharma -->
-                        <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-3 mb-4">
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="jv1.jpeg" target="_blank">
-                                    <img src="jv1.jpeg" alt="GestPharma - Dashboard" class="w-full h-32 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-[11px] text-center text-slate-400 bg-slate-950/80 truncate">Dashboard & Alertes</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="jv2.jpeg" target="_blank">
-                                    <img src="jv2.jpeg" alt="GestPharma - Stock Médicaments" class="w-full h-32 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-[11px] text-center text-slate-400 bg-slate-950/80 truncate">Gestion Médicaments</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="jv3.jpeg" target="_blank">
-                                    <img src="jv3.jpeg" alt="GestPharma - Ventes" class="w-full h-32 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-[11px] text-center text-slate-400 bg-slate-950/80 truncate">Achats / Ventes</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="jv4.jpeg" target="_blank">
-                                    <img src="jv4.jpeg" alt="GestPharma - Entrées Stock" class="w-full h-32 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-[11px] text-center text-slate-400 bg-slate-950/80 truncate">Entrées de Stock</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="jv5.jpeg" target="_blank">
-                                    <img src="jv5.jpeg" alt="GestPharma - Statistiques" class="w-full h-32 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-[11px] text-center text-slate-400 bg-slate-950/80 truncate">Statistiques & Ventes</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="jv6.jpeg" target="_blank">
-                                    <img src="jv6.jpeg" alt="GestPharma - Impression Facture PDF" class="w-full h-32 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-[11px] text-center text-slate-400 bg-slate-950/80 truncate">Factures & Export PDF</div>
-                            </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 pt-2">
+                            <a href="jv1.jpeg" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="jv1.jpeg" alt="Dashboard" class="w-full h-20 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="jv2.jpeg" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="jv2.jpeg" alt="Stock" class="w-full h-20 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="jv3.jpeg" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="jv3.jpeg" alt="Ventes" class="w-full h-20 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="jv4.jpeg" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="jv4.jpeg" alt="Entrées" class="w-full h-20 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="jv5.jpeg" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="jv5.jpeg" alt="Stats" class="w-full h-20 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="jv6.jpeg" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="jv6.jpeg" alt="Factures" class="w-full h-20 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-brand-green pt-2">
+                            <span>#Java</span> <span>#PostgreSQL</span> <span>#DAO</span> <span>#PDF-Export</span>
                         </div>
                     </div>
-                    <div class="p-6 pt-0">
-                        <div class="flex flex-wrap gap-2 font-mono text-xs text-blue-300">
-                            <span>#Java</span> <span>#PostgreSQL</span> <span>#DAO</span> <span>#PDF-Generation</span> <span>#IntelliJ</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Projet 4 : ColisTrans -->
-                <div class="bg-slate-800 rounded-xl border border-slate-700/50 overflow-hidden lg:col-span-3 flex flex-col justify-between hover:border-blue-500/50 transition">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
+                    <!-- Projet Infrastructure Réseau -->
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-6 space-y-4 hover:border-brand-green/40 transition">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
                             <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-truck-fast text-3xl text-sky-400"></i>
-                                <h3 class="text-2xl font-bold">ColisTrans - Gestion Coopérative</h3>
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                                    <i class="fa-solid fa-network-wired text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Infrastructure Réseau (l2eni.mg)</h3>
+                                    <p class="text-xs text-slate-400 font-mono">Services Centralisés & Monitoring System</p>
+                                </div>
                             </div>
-                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2 py-1 rounded">Juin 2026</span>
+                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-brand-border">Août 2026</span>
                         </div>
-                        <p class="text-slate-300 text-sm mb-6 max-w-3xl">
-                            Plateforme web complète de suivi et gestion d'envois/réceptions de colis et véhicules. Intègre la génération de reçus officiels imprimables et des tableaux de bord statistiques analytiques (recettes, itinéraires, suivi du parc automobile).
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Déploiement réseau complet sous domaine <code>l2eni.mg</code> : portail sécurisé TLS 1.3 avec annuaire LDAP, webmail Roundcube et supervision globale des systèmes en temps réel via Grafana & Prometheus.
                         </p>
-
-                        <!-- Galerie ColisTrans -->
-                        <div class="grid md:grid-cols-3 gap-4 mb-4">
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="php1.png" target="_blank">
-                                    <img src="php1.png" alt="ColisTrans - Réceptions" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-xs text-center text-slate-400 bg-slate-950/80">Gestion des Réceptions</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="php2.png" target="_blank">
-                                    <img src="php2.png" alt="ColisTrans - Tableau de bord" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-xs text-center text-slate-400 bg-slate-950/80">Tableau de bord & Aperçu reçu</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="php3.png" target="_blank">
-                                    <img src="php3.png" alt="ColisTrans - Statistiques" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-xs text-center text-slate-400 bg-slate-950/80">Analyses Statistiques</div>
-                            </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+                            <a href="cs3.png" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="cs3.png" alt="Portail LDAP" class="w-full h-24 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="cs5.png" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="cs5.png" alt="Roundcube" class="w-full h-24 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="cs6.png" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="cs6.png" alt="Grafana Mail" class="w-full h-24 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="cs7.png" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="cs7.png" alt="Grafana CPU" class="w-full h-24 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-brand-green pt-2">
+                            <span>#LDAP</span> <span>#TLS1.3</span> <span>#Roundcube</span> <span>#Grafana</span> <span>#Prometheus</span>
                         </div>
                     </div>
-                    <div class="p-6 pt-0">
-                        <div class="flex flex-wrap gap-2 font-mono text-xs text-blue-300">
+
+                    <!-- Projet ColisTrans -->
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-6 space-y-4 hover:border-brand-green/40 transition">
+                        <div class="flex flex-wrap justify-between items-start gap-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
+                                    <i class="fa-solid fa-truck-fast text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">ColisTrans - Gestion Coopérative</h3>
+                                    <p class="text-xs text-slate-400 font-mono">Plateforme Web PHP & MySQL</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-brand-border">Juin 2026</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Gestion d'envois/réceptions de colis et véhicules, reçus officiels imprimables et tableaux de bord analytiques.
+                        </p>
+                        <div class="grid grid-cols-3 gap-2 pt-2">
+                            <a href="php1.png" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="php1.png" alt="Réceptions" class="w-full h-24 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="php2.png" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="php2.png" alt="Dashboard" class="w-full h-24 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                            <a href="php3.png" target="_blank" class="rounded-lg overflow-hidden border border-brand-border bg-slate-900 group">
+                                <img src="php3.png" alt="Statistiques" class="w-full h-24 object-cover group-hover:scale-110 transition duration-300">
+                            </a>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-brand-green pt-2">
                             <span>#PHP</span> <span>#MySQL</span> <span>#Chart.js</span> <span>#TailwindCSS</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Projet 5 : Infrastructure Réseau -->
-                <div class="bg-slate-800 rounded-xl border border-slate-700/50 overflow-hidden lg:col-span-3 flex flex-col justify-between hover:border-blue-500/50 transition">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-network-wired text-3xl text-indigo-400"></i>
-                                <h3 class="text-2xl font-bold">Infrastructure Réseau & Services Numériques (l2eni.mg)</h3>
+                    <!-- Grille 3 autres projets rapides -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-5 hover:border-brand-green/40 transition">
+                            <div class="flex justify-between items-start mb-3">
+                                <i class="fa-solid fa-users text-2xl text-emerald-400"></i>
+                                <span class="text-[10px] font-mono text-slate-400">Mai 2026</span>
                             </div>
-                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2 py-1 rounded">Août 2026</span>
+                            <h4 class="font-bold text-white mb-1">Gestion des Salariés</h4>
+                            <p class="text-xs text-slate-400 mb-3">Application web de gestion du personnel.</p>
+                            <span class="text-[11px] font-mono text-brand-green">#Vue.js #JS</span>
                         </div>
-                        <p class="text-slate-300 text-sm mb-6 max-w-3xl">
-                            Déploiement d'une infrastructure réseau complète sous domaine <code>l2eni.mg</code> : portail web d'accès sécurisé via authentification centralisée LDAP et chiffrement TLS 1.3, serveur de messagerie interne Roundcube intégrant les alertes automatisées, et supervision globale des systèmes et services réseau en temps réel via Prometheus & Grafana (Node Exporter).
-                        </p>
 
-                        <!-- Galerie Infrastructure Réseau -->
-                        <div class="grid md:grid-cols-4 gap-4 mb-4">
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="cs3.png" target="_blank">
-                                    <img src="cs3.png" alt="Portail Sécurisé - l2eni.mg" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-xs text-center text-slate-400 bg-slate-950/80">Portail Web & Authentification LDAP</div>
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-5 hover:border-brand-green/40 transition">
+                            <div class="flex justify-between items-start mb-3">
+                                <i class="fa-solid fa-money-check-dollar text-2xl text-purple-400"></i>
+                                <span class="text-[10px] font-mono text-slate-400">Août 2026</span>
                             </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="cs5.png" target="_blank">
-                                    <img src="cs5.png" alt="Messagerie Roundcube" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-xs text-center text-slate-400 bg-slate-950/80">Webmail Roundcube & Alertes Mail</div>
+                            <h4 class="font-bold text-white mb-1">Paiement de Salaires</h4>
+                            <p class="text-xs text-slate-400 mb-3">Application Desktop de paie.</p>
+                            <span class="text-[11px] font-mono text-brand-green">#C# #.NET</span>
+                        </div>
+
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-5 hover:border-brand-green/40 transition">
+                            <div class="flex justify-between items-start mb-3">
+                                <i class="fa-solid fa-shield-halved text-2xl text-rose-500"></i>
+                                <span class="text-[10px] font-mono text-slate-400">Août 2026</span>
                             </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="cs6.png" target="_blank">
-                                    <img src="cs6.png" alt="Supervision Grafana - Services Mail" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-xs text-center text-slate-400 bg-slate-950/80">Supervision Grafana (Status Services)</div>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-900">
-                                <a href="cs7.png" target="_blank">
-                                    <img src="cs7.png" alt="Monitoring Métriques Système" class="w-full h-40 object-cover hover:scale-105 transition duration-300">
-                                </a>
-                                <div class="p-2 text-xs text-center text-slate-400 bg-slate-950/80">Métriques CPU / RAM / Trafic Réseau</div>
-                            </div>
+                            <h4 class="font-bold text-white mb-1">Sécurité & Red/Blue</h4>
+                            <p class="text-xs text-slate-400 mb-3">Simulation attaque/défense virtuelle.</p>
+                            <span class="text-[11px] font-mono text-brand-green">#Cybersécurité</span>
                         </div>
                     </div>
-                    <div class="p-6 pt-0">
-                        <div class="flex flex-wrap gap-2 font-mono text-xs text-blue-300">
-                            <span>#LDAP</span> <span>#TLS 1.3</span> <span>#Roundcube</span> <span>#Grafana</span> <span>#Prometheus</span> <span>#DNS</span>
-                        </div>
-                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION COMPETENCES (Exactement selon l'image fournie) -->
+            <section id="skills" class="space-y-6 pt-6">
+                <div class="flex items-center gap-2 border-b border-brand-border pb-4">
+                    <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+                    <h2 class="text-xl font-bold tracking-wide text-white uppercase font-mono text-sm">Compétences Techniques</h2>
                 </div>
 
-                <!-- Projet 6 -->
-                <div class="bg-slate-800 rounded-xl border border-slate-700/50 overflow-hidden flex flex-col justify-between hover:border-blue-500/50 transition">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <i class="fa-solid fa-shield-halved text-3xl text-rose-500"></i>
-                            <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2 py-1 rounded">Août 2026</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Sécurité & Red/Blue Team</h3>
-                        <p class="text-slate-400 text-sm mb-4">
-                            Conception d'architecture sécurisée et simulation d'attaques/défenses en environnement virtuel.
-                        </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Langages & Frameworks -->
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-5">
+                        <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-code text-blue-400"></i> Langages & Frameworks
+                        </h3>
+                        <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-hashtag text-purple-400 text-sm w-4 text-center"></i>
+                                <span>C / C++ / C#</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-brands fa-js text-yellow-400 text-sm w-4 text-center"></i>
+                                <span>Java / JavaScript</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-brands fa-vuejs text-emerald-400 text-sm w-4 text-center"></i>
+                                <span>Vue.js / React.js</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-brands fa-php text-indigo-400 text-sm w-4 text-center"></i>
+                                <span>PHP / HTML & CSS</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-brands fa-python text-amber-400 text-sm w-4 text-center"></i>
+                                <span>Python / Assembleur</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="p-6 pt-0">
-                        <div class="flex flex-wrap gap-2 font-mono text-xs text-blue-300">
-                            <span>#Cybersécurité</span> <span>#RedTeam</span> <span>#BlueTeam</span>
-                        </div>
+
+                    <!-- BDD & Service Réseau -->
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-5">
+                        <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-database text-blue-400"></i> BDD & Service Réseau
+                        </h3>
+                        <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-server text-cyan-400 text-sm w-4 text-center"></i>
+                                <span>MySQL / PostgreSQL</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-sitemap text-emerald-400 text-sm w-4 text-center"></i>
+                                <span>LDAP / DNS / Webmail</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-chart-line text-orange-400 text-sm w-4 text-center"></i>
+                                <span>Prometheus / Grafana</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-code text-cyan-400 text-sm w-4 text-center"></i>
+                                <span>IntelliJ IDEA / VS Code</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Design & Langues -->
+                    <div class="bg-brand-card border border-brand-border rounded-2xl p-5">
+                        <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-palette text-blue-400"></i> Design & Langues
+                        </h3>
+                        <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-vector-square text-pink-400 text-sm w-4 text-center"></i>
+                                <span>Design UX/UI (Attestation ODC)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-brands fa-figma text-purple-400 text-sm w-4 text-center"></i>
+                                <span>Figma / Adobe</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-font text-rose-400 text-sm w-4 text-center"></i>
+                                <span>Malagasy (Maternelle)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-comments text-sky-400 text-sm w-4 text-center"></i>
+                                <span>Français (Opérationnel)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-globe text-emerald-400 text-sm w-4 text-center"></i>
+                                <span>Anglais (Notions)</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Compétences avec icônes aux couleurs officielles -->
-    <section id="skills" class="py-20 bg-slate-800/50 border-y border-slate-800 px-4">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center"><span class="text-blue-500">#</span> Compétences Techniques</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-
-                <!-- Langages & Frameworks -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-lg font-bold text-blue-400 mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-code"></i> Langages & Frameworks
-                    </h3>
-                    <ul class="space-y-3.5 text-slate-300 text-sm">
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-hashtag text-purple-400 w-5 text-center text-base"></i>
-                            <span>C / C++ / C#</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-brands fa-js text-yellow-400 w-5 text-center text-base"></i>
-                            <span>Java / JavaScript</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-brands fa-vuejs text-emerald-400 w-5 text-center text-base"></i>
-                            <span>Vue.js / React.js</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-brands fa-php text-indigo-400 w-5 text-center text-base"></i>
-                            <span>PHP / HTML & CSS</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-brands fa-python text-amber-400 w-5 text-center text-base"></i>
-                            <span>Python / Assembleur</span>
-                        </li>
-                    </ul>
+            <!-- SECTION CONTACT & FOOTER -->
+            <section id="contact" class="space-y-6 pt-6">
+                <div class="flex items-center gap-2 border-b border-brand-border pb-4">
+                    <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+                    <h2 class="text-xl font-bold tracking-wide text-white uppercase font-mono text-sm">Me Contacter</h2>
                 </div>
 
-                <!-- BDD & Services Réseau -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-lg font-bold text-blue-400 mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-database"></i> BDD & Service Réseau
-                    </h3>
-                    <ul class="space-y-3.5 text-slate-300 text-sm">
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-server text-sky-400 w-5 text-center text-base"></i>
-                            <span>MySQL / PostgreSQL</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-network-wired text-teal-400 w-5 text-center text-base"></i>
-                            <span>LDAP / DNS / Webmail</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-chart-line text-orange-400 w-5 text-center text-base"></i>
-                            <span>Prometheus / Grafana</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-laptop-code text-cyan-400 w-5 text-center text-base"></i>
-                            <span>IntelliJ IDEA / VS Code</span>
-                        </li>
-                    </ul>
-                </div>
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 md:p-8 space-y-6">
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Vous avez un projet en tête, une opportunité de stage ou une question ? N'hésitez pas à me contacter directement via email ou téléphone.
+                    </p>
 
-                <!-- Design & Langues -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-lg font-bold text-blue-400 mb-6 flex items-center gap-2">
-                        <i class="fa-solid fa-palette"></i> Design & Langues
-                    </h3>
-                    <ul class="space-y-3.5 text-slate-300 text-sm">
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-object-group text-pink-400 w-5 text-center text-base"></i>
-                            <span>Design UX/UI (Attestation ODC)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-brands fa-figma text-violet-400 w-5 text-center text-base"></i>
-                            <span>Figma / Adobe</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-language text-rose-400 w-5 text-center text-base"></i>
-                            <span>Malagasy (Maternelle)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-comments text-blue-400 w-5 text-center text-base"></i>
-                            <span>Français (Opérationnel)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-globe text-emerald-400 w-5 text-center text-base"></i>
-                            <span>Anglais (Notions)</span>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="mailto:aimejasonandriatiana@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-slate-900 border border-brand-border hover:border-brand-green/50 transition group">
+                            <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green group-hover:scale-110 transition">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 block">Envoyer un Email</span>
+                                <span class="text-xs sm:text-sm font-bold text-white truncate block">aimejasonandriatiana@gmail.com</span>
+                            </div>
+                        </a>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-20 px-4">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4"><span class="text-blue-500">#</span> Me Contacter</h2>
-            <p class="text-slate-400 mb-8">N'hésitez pas à me contacter pour toute opportunité de stage ou projet d'envergure.</p>
-            
-            <div class="grid md:grid-cols-2 gap-4 mb-8 text-left">
-                <a href="mailto:aimejasonandriatiana@gmail.com" class="bg-slate-800 p-4 rounded-lg border border-slate-700 flex items-center gap-4 hover:border-blue-500 transition">
-                    <i class="fa-solid fa-envelope text-2xl text-rose-400"></i>
-                    <div>
-                        <div class="text-xs text-slate-400">Email</div>
-                        <div class="text-sm font-medium text-slate-200">aimejasonandriatiana@gmail.com</div>
+                        <a href="tel:+261338992041" class="flex items-center gap-4 p-4 rounded-xl bg-slate-900 border border-brand-border hover:border-brand-green/50 transition group">
+                            <div class="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green group-hover:scale-110 transition">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 block">Téléphone</span>
+                                <span class="text-xs sm:text-sm font-bold text-white block">+261 33 89 920 41</span>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a href="tel:+261338992041" class="bg-slate-800 p-4 rounded-lg border border-slate-700 flex items-center gap-4 hover:border-blue-500 transition">
-                    <i class="fa-solid fa-phone text-2xl text-emerald-400"></i>
-                    <div>
-                        <div class="text-xs text-slate-400">Téléphone</div>
-                        <div class="text-sm font-medium text-slate-200">+261 33 89 920 41</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+                </div>
+            </section>
 
-    <!-- Footer -->
-    <footer class="py-6 bg-slate-950 text-center text-xs text-slate-500 border-t border-slate-800">
-        <p>© 2026 Aimé Jason Andriatiana RAZAFIMANDIMBY. Déployé sur Vercel.</p>
-    </footer>
+            <footer class="pt-8 border-t border-brand-border text-center text-xs text-slate-500">
+                <p>© 2026 Aimé Jason Andriatiana RAZAFIMANDIMBY. Déployé sur Vercel.</p>
+            </footer>
 
+        </main>
+    </div>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
 </body>
 </html>
